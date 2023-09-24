@@ -1,3 +1,4 @@
+"use client"
 import Footer from "components/components/layout/Footer/Footer";
 import Header from "components/components/layout/Header/Header";
 import "./globals.css";
@@ -7,7 +8,7 @@ import { I18nextProvider } from "react-i18next";
 import global_en from "../json/i18n/en/global.json";
 import global_es from "../json/i18n/es/global.json";
 import BannerLoop from "components/components/layout/BannerLoop/BannerLoop";
-/*
+
 i18next.init({
   interpolation: { escapeValue: false },
   lng: "en",
@@ -20,7 +21,7 @@ i18next.init({
     },
   },
 });
-*/
+
 export default function RootLayout({
   children,
 }: {
@@ -33,14 +34,14 @@ export default function RootLayout({
         <meta name="description" content="Description" />
       </head>
       <body>
-        {/*<I18nextProvider i18n={i18next}>*/}
-        <main>
-          <BannerLoop />
-          <Header />
-          {children}
-          <Footer />
-        </main>
-        {/*</I18nextProvider>*/}
+        <I18nextProvider i18n={i18next}>
+          <main>
+            <BannerLoop />
+            <Header />
+            {children}
+            <Footer />
+          </main>
+        </I18nextProvider>
       </body>
     </html>
   );
