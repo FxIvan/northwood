@@ -4,6 +4,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './public/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
     extend: {
@@ -12,13 +13,17 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      color:{
-        "":""
+      colors:{
+        "turquoise":"#00AB8E",
+        "turquoiseHover":"#00C7A9",
       },
       fontFamily: {
         "space-grotesk": ["SpaceGrotesk"],
         inter: ["Inter"],
       },
+      fontSize: {
+        "category": "clamp(0.7rem, 1.3vw, 1rem);",
+      }
     },
   },
   plugins: [],

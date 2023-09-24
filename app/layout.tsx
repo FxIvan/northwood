@@ -1,4 +1,3 @@
-"use client";
 import Footer from "components/components/layout/Footer/Footer";
 import Header from "components/components/layout/Header/Header";
 import "./globals.css";
